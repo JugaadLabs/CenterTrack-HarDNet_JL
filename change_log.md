@@ -55,4 +55,16 @@ So far, we have tested out the following training command, run inside `repo_root
 $ python3 main.py tracking --exp_id coco_tracking --tracking --arch hardnet_85 --head_conv 256 --gpus 0 --batch_size 1 --lr 5e-4 --num_workers 16 --pre_hm --shift 0.05 --scale 0.05 --hm_disturb 0.05 --lost_disturb 0.4 --fp_disturb 0.1 --num_epochs 1
 ```
 
-This is a modified version of the command found in the `CenterTrack/experiments/coco_tracking.sh` script that was used to train the DLA model we have been using in IRIS.
+This is a modified version of the command found in the `CenterTrack/experiments/coco_tracking.sh` script that was used to train the DLA model we have been using in IRIS. We will test out other flags that can be set to generate validation metrics and save the model periodically or even after every epoch:
+```
+--save_point		# String of integers for epochs to save model at. Use this or:
+--save_all			# Saves model to disk after each epoch
+--eval_val			# True/False to evaluate model on validation set
+--val_intervals x	# Epoch interval to run validation (when epoch is in save_point list, or epoch % val_intervals == 0)
+```
+
+For overfitting, it has been suggested by the developers of the CenterNet repository (on which CenterTrack was made by the same developers) to use validation AP over the typical loss, as the validation loss may not behave normally (decrease for a while and then increase, see [this issue](https://github.com/xingyizhou/CenterNet/issues/148) for example and more details)
+
+## Changes needed to convert the model to TensorRT
+
+Still in progress
