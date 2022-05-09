@@ -61,7 +61,7 @@ This is a modified version of the command found in the `CenterTrack/experiments/
 --save_all			# Saves model to disk after each epoch
 --eval_val			# True/False to evaluate model on validation set
 --val_intervals x	# Epoch interval to run validation (when epoch is in save_point 
-                    #   list, or epoch % val_intervals == 0)
+                        #   list, or epoch % val_intervals == 0)
 ```
 
 For overfitting, it has been suggested by the developers of the CenterNet repository (on which CenterTrack was made by the same developers) to use validation AP over the typical loss, as the validation loss may not behave normally (decrease for a while and then increase, see [this issue](https://github.com/xingyizhou/CenterNet/issues/148) for example and more details)
