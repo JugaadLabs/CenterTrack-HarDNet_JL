@@ -12,8 +12,10 @@ from .networks.resdcn import PoseResDCN
 from .networks.resnet import PoseResNet
 from .networks.dlav0 import DLASegv0
 from .networks.generic_network import GenericNetwork
+from .networks.hardnet import HarDNetSeg # NEW line
 
 _network_factory = {
+  'hardnet': HarDNetSeg, # NEW line
   'resdcn': PoseResDCN,
   'dla': DLASeg,
   'res': PoseResNet,

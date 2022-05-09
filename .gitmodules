@@ -12,3 +12,7 @@
 	path = src/lib/model/networks/DCNv2
 	url = https://github.com/CharlesShang/DCNv2/
 	branch = master
+
+[submodule "src/pytorch_bn_fusion"]
+	path = src/pytorch_bn_fusion
+	url = https://github.com/MIPT-Oulu/pytorch_bn_fusion

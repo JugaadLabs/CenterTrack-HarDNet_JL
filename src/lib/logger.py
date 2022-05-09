@@ -30,7 +30,8 @@ class Logger(object):
     file_name = os.path.join(opt.save_dir, 'opt.txt')
     with open(file_name, 'wt') as opt_file:
       opt_file.write('==> commit hash: {}\n'.format(
-        subprocess.check_output(["git", "describe"])))
+        # subprocess.check_output(["git", "describe"])))  # OLD line
+        subprocess.check_output(["git", "describe", "--always"]))) # NEW line
       opt_file.write('==> torch version: {}\n'.format(torch.__version__))
       opt_file.write('==> cudnn version: {}\n'.format(
         torch.backends.cudnn.version()))
