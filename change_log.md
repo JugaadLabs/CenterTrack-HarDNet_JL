@@ -1,4 +1,6 @@
-# Simple summary of changes made
+# Simple summary of changes made to the CenterTrack repository
+
+This repository was forked from [CenterTrack](https://github.com/xingyizhou/CenterTrack) and modified to use the HarDNet backbone used in the [CenterNet-HarDNet](https://github.com/PingoLH/CenterNet-HarDNet) repository.
 
 Details on how we arrived at the following changes are provided in these [notes](/adding_hardnet_backbone_notes.md).
 
